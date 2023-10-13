@@ -4,7 +4,7 @@ ARM64="https://nightly.multitheftauto.com/multitheftauto_linux_arm64-1.6.0-rc-22
 ARCH=$([ "$(uname -m)" == "x86_64" ] && echo "$AMD64" || echo "$ARM64")
 if [ -f "./mta-server64" ] || [ -f "./mta-server-arm64" ]; then
     chmod -R 755 ./*
-    bash <(curl -s https://raw.githubusercontent.com/Ashu11-A/Ashu_eggs/main/MTA/start.sh)
+    bash <(curl -s https://raw.githubusercontent.com/LucasRibeiro36/Eggs-PTERODACTYL/main/MTA/start.sh)
 else
 
     curl -Lo multitheftauto_linux.tar.gz "$ARCH"
