@@ -37,7 +37,6 @@ else
     mkdir -p mods/deathmatch/resources
     unzip -o -d mods/deathmatch/resources mtasa-resources-latest.zip
 
-    mkdir -p /mnt/server-conf
     tar -xvf mta-baseconfig.tar.gz
     cp -rf baseconfig/* mods/deathmatch
 
