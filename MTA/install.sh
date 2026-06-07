@@ -4,7 +4,6 @@ ARM64="https://nightly.multitheftauto.com/multitheftauto_linux_arm64-1.7.0-untes
 ARCH=$([ "$(uname -m)" == "x86_64" ] && echo "$AMD64" || echo "$ARM64")
 if [ -f "./mta-server64" ] || [ -f "./mta-server-arm64" ]; then
     chmod -R 755 ./*
-    bash <(curl -s https://raw.githubusercontent.com/LucasRibeiro36/Eggs-PTERODACTYL/main/MTA/start.sh)
 else
 
     curl -Lo multitheftauto_linux.tar.gz "$ARCH"
@@ -47,3 +46,5 @@ else
 
     echo "instalação do script concluído"
 fi
+
+bash <(curl -s https://raw.githubusercontent.com/LucasRibeiro36/Eggs-PTERODACTYL/main/MTA/start.sh)
