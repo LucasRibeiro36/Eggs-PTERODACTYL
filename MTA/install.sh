@@ -47,4 +47,4 @@ else
     echo "instalação do script concluído"
 fi
 
-bash <(curl -s https://raw.githubusercontent.com/LucasRibeiro36/Eggs-PTERODACTYL/main/MTA/start.sh)
+bash <(curl -fsSL https://raw.githubusercontent.com/LucasRibeiro36/Eggs-PTERODACTYL/main/MTA/start.sh)
