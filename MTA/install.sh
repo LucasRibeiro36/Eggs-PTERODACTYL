@@ -1,9 +1,10 @@
 #!/bin/bash
 AMD64="https://linux.mtasa.com/dl/multitheftauto_linux_x64.tar.gz"
-ARM64="https://nightly.multitheftauto.com/multitheftauto_linux_arm64-1.7.0-untested-25945.tar.gz"
+ARM64="https://nightly.multitheftauto.com/multitheftauto_linux_arm64-1.6.0-rc-22060.tar.gz"
 ARCH=$([ "$(uname -m)" == "x86_64" ] && echo "$AMD64" || echo "$ARM64")
 if [ -f "./mta-server64" ] || [ -f "./mta-server-arm64" ]; then
     chmod -R 755 ./*
+    bash <(curl -s https://raw.githubusercontent.com/LucasRibeiro36/Eggs-PTERODACTYL/main/MTA/start.sh)
 else
 
     curl -Lo multitheftauto_linux.tar.gz "$ARCH"
@@ -36,6 +37,7 @@ else
     mkdir -p mods/deathmatch/resources
     unzip -o -d mods/deathmatch/resources mtasa-resources-latest.zip
 
+    mkdir -p /mnt/server-conf
     tar -xvf mta-baseconfig.tar.gz
     cp -rf baseconfig/* mods/deathmatch
 
@@ -46,5 +48,3 @@ else
 
     echo "instalação do script concluído"
 fi
-
-bash <(curl -fsSL https://raw.githubusercontent.com/LucasRibeiro36/Eggs-PTERODACTYL/main/MTA/start.sh)
